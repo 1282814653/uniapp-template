@@ -14,11 +14,11 @@
 			"path": "pages/login/index",
 			"style": {
 				"navigationBarTitleText": "登录", // 当前 页面的字体信息
-				"navigationBarBackgroundColor": "#FFFF55", // 当前页面导航栏颜色
+				"navigationBarBackgroundColor": "#FFFFFF", // 当前页面导航栏颜色
 				"navigationBarTextStyle": "black", // 当前页面导航栏字体的颜色
-				"navigationBarShadow": {
-					"colorType":"yellow" // 当前 导航栏的阴影 grey、blue、green、orange、red、yellow
-				}, 
+				// "navigationBarShadow": {
+				// 	"colorType":"grey" // 当前 导航栏的阴影 grey、blue、green、orange、red、yellow
+				// }, 
 				"enablePullDownRefresh": true // 当前页面开启下拉刷新
 			}
 		},

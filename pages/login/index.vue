@@ -45,8 +45,8 @@
 		data() {
 			return {
 				form: {
-					username: "ghbddk",
-					password: "123"
+					username: "",
+					password: ""
 				},
 				passwordIcon: true,
 				userNameImage: require('@/static/images/login/username.png'),
