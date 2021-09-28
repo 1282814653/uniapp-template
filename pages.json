@@ -10,50 +10,62 @@
 	// 		"query": "uuid=c4bba940-f69e-11ea-a419-6bafda9d095e&__id__=1" //启动参数，在页面的onLoad函数里面得到
 	// 	}]
 	// },
-	"pages": [{
-			"path": "pages/login/index",
-			"style": {
-				"navigationBarTitleText": "登录", // 当前 页面的字体信息
-				"navigationBarBackgroundColor": "#FFFFFF", // 当前页面导航栏颜色
-				"navigationBarTextStyle": "black", // 当前页面导航栏字体的颜色
-				// "navigationBarShadow": {
-				// 	"colorType":"grey" // 当前 导航栏的阴影 grey、blue、green、orange、red、yellow
-				// }, 
-				"enablePullDownRefresh": true // 当前页面开启下拉刷新
-			}
+	"pages": [
+		// {
+		// 	"path": "pages/login/index",
+		// 	"style": {
+		// 		"navigationBarTitleText": "登录", // 当前 页面的字体信息
+		// 		"navigationBarBackgroundColor": "#FFFFFF", // 当前页面导航栏颜色
+		// 		"navigationBarTextStyle": "black", // 当前页面导航栏字体的颜色
+		// 		// "navigationBarShadow": {
+		// 		// 	"colorType":"grey" // 当前 导航栏的阴影 grey、blue、green、orange、red、yellow
+		// 		// }, 
+		// 		"enablePullDownRefresh": true // 当前页面开启下拉刷新
+		// 	}
+		// },
+		// 首页
+		{
+			"path": "pages/home/index"
+			// "style": {
+			// 	"navigationBarTitleText": "首页",
+			// 	"navigationBarBackgroundColor": "#ff0066",
+			// 	"navigationBarTextStyle": "white",
+			// 	"navigationStyle": "custom" // 当前页面单独去除原生导航栏...
+			// }
+		},
+		// 发现页
+		{
+			"path": "pages/found/index"
+			// "style": {
+			// 	"navigationBarTitleText": "信息",
+			// 	"navigationBarBackgroundColor": "#ff0066",
+			// 	"navigationBarTextStyle": "white" // 
+			// }
 		},
 		{
-			"path": "pages/home/index",
-			"style": {
-				"navigationBarTitleText": "首页",
-				"navigationBarBackgroundColor": "#ff0066",
-				"navigationBarTextStyle": "white",
-				"navigationStyle": "custom" // 当前页面单独去除原生导航栏...
-			}
+			"path": "pages/info/index"
+			// "style": {
+			// 	"navigationBarTitleText": "信息",
+			// 	"navigationBarBackgroundColor": "#ff0066",
+			// 	"navigationBarTextStyle": "white" // 
+			// }
 		},
 		{
-			"path": "pages/info/index",
-			"style": {
-				"navigationBarTitleText": "信息",
-				"navigationBarBackgroundColor": "#ff0066",
-				"navigationBarTextStyle": "white" // 
-			}
+			"path": "pages/other/index"
+			// "style": {
+			// 	"navigationBarTitleText": "其他",
+			// 	"navigationBarBackgroundColor": "#ff0066",
+			// 	"navigationBarTextStyle": "white" // 
+			// }
 		},
+		// 我的
 		{
-			"path": "pages/other/index",
-			"style": {
-				"navigationBarTitleText": "其他",
-				"navigationBarBackgroundColor": "#ff0066",
-				"navigationBarTextStyle": "white" // 
-			}
-		},
-		{
-			"path": "pages/my/index",
-			"style": {
-				"navigationBarTitleText": "我的",
-				"navigationBarBackgroundColor": "#ff0066",
-				"navigationBarTextStyle": "white" // 
-			}
+			"path": "pages/my/index"
+		// 	"style": {
+		// 		"navigationBarTitleText": "我的",
+		// 		"navigationBarBackgroundColor": "#ff0066",
+		// 		"navigationBarTextStyle": "white" // 
+		// 	}
 		}
 	],
 
@@ -61,8 +73,8 @@
 	"globalStyle": {
 		"navigationBarTextStyle": "black", // 全局 导航栏文本字体颜色
 		"navigationBarTitleText": "uview-template", //全局 导航栏标题
-		"navigationBarBackgroundColor": "#00ff00" // 全局 导航栏背景色
-		// "navigationStyle":"custom", //default  custom  // 全局 是否显示 默认导航栏
+		"navigationBarBackgroundColor": "#00ff00", // 全局 导航栏背景色
+		"navigationStyle":"custom" //default  custom  // 全局 是否显示 默认导航栏
 		// "enablePullDownRefresh":true, // 全局 是否开启下拉刷新，
 		// "backgroundColor": "#FFaa66", // 全局 下拉的背景色
 		// "backgroundTextStyle":"light" //  全局 下拉 loading 的样式， dark / light
@@ -80,16 +92,22 @@
 				"text": "首页"
 			},
 			{
-				"pagePath": "pages/info/index",
+				"pagePath": "pages/found/index",
 				// "iconPath": "static/uview/example/js.png",
 				// "selectedIconPath": "static/uview/example/js_select.png",
-				"text": "信息"
+				"text": "发现"
 			},
 			{
 				"pagePath": "pages/other/index",
 				// "iconPath": "static/uview/example/template.png",
 				// "selectedIconPath": "static/uview/example/template_select.png",
 				"text": "其他"
+			},
+			{
+				"pagePath": "pages/info/index",
+				// "iconPath": "static/uview/example/js.png",
+				// "selectedIconPath": "static/uview/example/js_select.png",
+				"text": "信息"
 			},
 			{
 				"pagePath": "pages/my/index",
