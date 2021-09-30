@@ -33,6 +33,11 @@
 			// 	"navigationStyle": "custom" // 当前页面单独去除原生导航栏...
 			// }
 		},
+		{
+			"path":"pages/home/mall-menu",
+			"navigationStyle": "default",
+			"navigationBarTitleText": "商品列表"
+		},
 		// 发现页
 		{
 			"path": "pages/found/index"
