@@ -1,4 +1,4 @@
-const homes = {
+ const home = {
 	nav_list: [{
 			name: '首页',
 			page: 1
@@ -52,6 +52,26 @@ const homes = {
 			page: 13
 		}
 	],
+
+	tabs_swipers: [{
+			name: '看推荐'
+		},
+		{
+			name: '逛附近'
+		},
+		{
+			name: '直播',
+			count: '秒杀中'
+		},
+		{
+			name: '实惠好货',
+		},
+		{
+			name: '短视频',
+			
+		}
+	]
 }
 
-export default homes
+
+export default home

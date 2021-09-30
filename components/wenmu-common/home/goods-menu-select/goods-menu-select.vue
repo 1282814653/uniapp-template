@@ -47,7 +47,7 @@
 		data() {
 			return {
 				current: 0,
-				list: goods_menu_select_data
+				list: goods_menu_select_data,
 			};
 		},
 		created() {
@@ -57,14 +57,14 @@
 			// console.log('this.list--->', this.list)
 		},
 		methods: {
+
 			handleChangeMenu(e) {
-				// console.log('handleChangeMenu', e);
-				// this.current = e.detail.current;
+				this.current = e.detail.current;
 			},
 
 			handleClickMenu(val) {
 				console.log('handleClickMenu-->', val)
-				this.$emit("handleClickMenu",val)
+				this.$emit("handleClickMenu", val)
 			}
 		},
 		computed: {

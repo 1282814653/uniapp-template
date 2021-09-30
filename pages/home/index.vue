@@ -13,7 +13,7 @@
 		<goods-menu-select v-if="isShowSwiperCom" @handleClickMenu='handleClickMenu'></goods-menu-select>
 		<!-- 根据选项卡显示内容 -->
 		<tabs-item-content :tabsData="tabsData"></tabs-item-content>
-
+		<tabs-swipers style="height: 1200rpx;" :tabsSwipers='tabsSwipers'></tabs-swipers>
 
 		<!-- 首页弹窗 图片显示 -->
 		<picture-windows :src="srcImg" :show="isShowPicture" @handleGo='handleGo' @handleClose='handleClose'>
@@ -23,6 +23,9 @@
 </template>
 
 <script>
+	import TabsSwipers from '@/components/wenmu-common/home/tabs-swipers/tabs-swipers.vue'
+
+	// 商品菜单列表
 	import GoodsMenuSelect from '@/components/wenmu-common/home/goods-menu-select/goods-menu-select.vue'
 	// 轮播图
 	import SwipersItem from '@/components/wenmu-common/home/swipers-item/swipers-item.vue'
@@ -40,10 +43,11 @@
 	// tabs 选项卡数据
 	import tabs_datas from '@/static/datas/home/tabsDatas.js'
 	// 数据词典 
-	import nav_list from '@/static/datas/home/dictionary.js'
+	import homes from '@/static/datas/home/dictionary.js'
 	export default {
 		name: 'Home',
 		components: {
+			TabsSwipers,
 			GoodsMenuSelect,
 			SwipersItem,
 			TabsItemContent,
@@ -59,13 +63,15 @@
 				srcImg: '/static/images/common/reward.png',
 				isShowPicture: false,
 				nvaList: [],
+				tabsSwipers: [],
 				tabsData: {},
 				swiperData: [],
 				isShowSwiperCom: true,
 			};
 		},
 		created() {
-			this.nvaList = nav_list.nav_list
+			this.nvaList = homes.nav_list
+			this.tabsSwipers = homes.tabs_swipers
 			this.swiperData = swiper_datas
 			this.handleChangeMenu(0)
 		},
@@ -77,19 +83,19 @@
 					case 0:
 						// this.$u.route('/pages/my/index')
 						uni.switchTab({
-							url:'/pages/my/index'
+							url: '/pages/my/index'
 						})
 						break
 					case 1:
 						// this.$u.route('/pages/info/index')
 						uni.switchTab({
-							url:'/pages/info/index'
+							url: '/pages/info/index'
 						})
 						break
 					case 2:
 						// this.$u.route('/pages/other/index')
 						uni.switchTab({
-							url:'/pages/other/index'
+							url: '/pages/other/index'
 						})
 						break
 				}
